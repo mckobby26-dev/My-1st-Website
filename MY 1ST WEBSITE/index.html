@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>KWABENA | Welcome on Board</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f7fa;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #111827;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #38bdf8;
+        }
+
+        /* Home */
+        #home {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 100px 20px 50px;
+            background: linear-gradient(rgba(17,24,39,0.75), rgba(30,58,138,0.75)), url("images/YOUR-BACKGROUND.jpg") center/cover no-repeat;
+            color: white;
+        }
+
+        .home-content {
+            max-width: 850px;
+        }
+
+        .home-content h1 {
+            font-size: 65px;
+            margin-bottom: 15px;
+            letter-spacing: 4px;
+        }
+
+        .home-content h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #38bdf8;
+        }
+
+        .home-content p {
+            font-size: 19px;
+            margin-bottom: 30px;
+            color: #e5e7eb;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 28px;
+            background: #38bdf8;
+            color: #111827;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 30px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: white;
+            transform: translateY(-3px);
+        }
+
+        /* Sections */
+        section {
+            padding: 90px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 38px;
+            margin-bottom: 40px;
+            color: #111827;
+        }
+
+        /* About */
+        #about {
+            background: white;
+        }
+
+        .about-container {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .about-container p {
+            font-size: 18px;
+            margin-bottom: 18px;
+            color: #4b5563;
+        }
+        .profile-pic {
+    display: block;
+    margin: 0 auto 30px;
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #1d4ed8;
+}
+        .highlight {
+            color: #1d4ed8;
+            font-weight: bold;
+        }
+
+        /* Services */
+        #services {
+            background: #f5f7fa;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .card {
+            background: white;
+            padding: 35px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            color: #1d4ed8;
+            font-size: 23px;
+        }
+
+        .card p {
+            color: #6b7280;
+        }
+
+        /* Contact */
+        #contact {
+            background: #111827;
+            color: white;
+            text-align: center;
+        }
+
+        #contact .section-title {
+            color: white;
+        }
+
+        .contact-text {
+            font-size: 19px;
+            margin-bottom: 25px;
+            color: #d1d5db;
+        }
+
+        .contact-info {
+            font-size: 18px;
+        }
+
+        .contact-info a {
+            color: #38bdf8;
+            text-decoration: none;
+        }
+
+        /* Footer */
+        footer {
+            background: #030712;
+            color: #9ca3af;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+        /* Mobile */
+        @media (max-width: 700px) {
+
+            nav {
+                padding: 15px 5%;
+            }
+
+            nav ul {
+                gap: 12px;
+            }
+
+            nav ul li a {
+                font-size: 12px;
+            }
+
+            .home-content h1 {
+                font-size: 45px;
+            }
+
+            .home-content h2 {
+                font-size: 24px;
+            }
+
+            .home-content p {
+                font-size: 16px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 70px 6%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">KWABENA</div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#services">What I Do</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Home -->
+    <section id="home">
+
+        <div class="home-content">
+
+            <h1>KWABENA</h1>
+
+            <h2>Welcome on Board</h2>
+
+            <p>
+                Welcome to my space — where sports science,
+                computer analysis, learning, and innovation come together.
+            </p>
+
+            <a href="#about" class="btn">Explore More</a>
+
+        </div>
+
+    </section>
+
+
+    <!-- About Me -->
+    <section id="about">
+
+        <h2 class="section-title">About Me</h2>
+<img src="images/KWABENA.jpg" alt="Photo of KWABENA" class="profile-pic">
+        <div class="about-container">
+
+            <p>
+                I am <span class="highlight">Kwabena</span>,
+                a Ghanaian born and proudly from Ghanaian parents.
+            </p>
+
+            <p>
+                I was born on <span class="highlight">November 26, 1996</span>.
+            </p>
+
+            <p>
+                My passion lies in
+                <span class="highlight">Sports Science</span>
+                and
+                <span class="highlight">Computer Analysis</span>.
+            </p>
+
+            <p>
+                I believe in continuous growth, innovation, and learning.
+                We give you the best, and we keep learning to become even better.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- What I Do -->
+    <section id="services">
+
+        <h2 class="section-title">What I Do</h2>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h3>Sports Science</h3>
+
+                <p>
+                    Exploring sports performance, analysis,
+                    training, fitness, and the science behind
+                    improving athletic performance.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Computer Analysis</h3>
+
+                <p>
+                    Using technology, data, and computer-based
+                    analysis to understand information and
+                    develop better solutions.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact">
+
+        <h2 class="section-title">Contact</h2>
+
+        <p class="contact-text">
+            Here's a short one. We will get back soon.
+        </p>
+
+        <div class="contact-info">
+
+            <p>
+                Get in touch with KWABENA
+            </p>
+
+            <!-- Replace this with your real email -->
+            <p>
+                Email:
+                <a href="mailto:mckobby26@gmail.com">
+                    mckobby26@email.com
+                </a>
+            </p>
+            <p>
+                Phone:
+                <a href="tel:+233267805883">
+                    +233267805883
+        
+                </a>
+            </p>
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            &copy; 2026 KWABENA. All Rights Reserved.
+        </p>
+
+        <p>
+            We give you the best. We keep learning the best.
+        </p>
+
+    </footer>
+
+</body>
+</html>
